@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 
+
 namespace CS_HW5_Translator
 {
     public partial class Form1 : Form

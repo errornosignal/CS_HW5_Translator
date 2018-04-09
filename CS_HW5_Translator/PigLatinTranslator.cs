@@ -1,6 +1,7 @@
 ﻿
-using System.Linq;
 
+
+using System.Linq;
 
 namespace CS_HW5_Translator
 {
@@ -22,8 +23,6 @@ namespace CS_HW5_Translator
             {
                 return Word + "way";
             }
-                
-            //Word = Word.ToLower();
 
             for (; Index < Length; Index++)
             {
