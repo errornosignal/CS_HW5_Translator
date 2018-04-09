@@ -35,10 +35,9 @@ namespace CS_HW5_Translator
                     //doNothing();
                 }
             }
-
-            //var firstpart = "";
-            var lastpart = Word.Substring(0, Index) + "ay";
-
+            
+            var LastPart = Word.Substring(0, Index) + "ay";
+            
             if (char.IsUpper(First))
             {
                 FirstPart = char.ToUpper(Word[Index++]) + Word.Substring(Index, Length - Index);
@@ -48,7 +47,7 @@ namespace CS_HW5_Translator
                 FirstPart = Word.Substring(Index, Length - Index);
             }
 
-            return FirstPart + lastpart;
+            return FirstPart + LastPart;
         }
     }
 }

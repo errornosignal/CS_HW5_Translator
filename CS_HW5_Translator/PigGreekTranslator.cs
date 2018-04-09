@@ -36,8 +36,7 @@ namespace CS_HW5_Translator
                 }
             }
 
-            //var firstpart = "";
-            var lastpart = Word.Substring(0, Index) + "omatos";
+            var LastPart = Word.Substring(0, Index) + "omatos";
 
             if (char.IsUpper(First))
             {
@@ -48,7 +47,7 @@ namespace CS_HW5_Translator
                 FirstPart = Word.Substring(Index, Length - Index);
             }
 
-            return FirstPart + lastpart;
+            return FirstPart + LastPart;
         }
     }
 }
