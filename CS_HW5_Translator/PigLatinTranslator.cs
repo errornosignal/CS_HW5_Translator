@@ -1,6 +1,7 @@
 ﻿
 using System.Linq;
 
+
 namespace CS_HW5_Translator
 {
     public class PigLatinTranslator : Translator

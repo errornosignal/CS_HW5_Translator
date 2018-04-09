@@ -2,8 +2,6 @@
 using System;
 using System.Collections;
 
-
-
 namespace CS_HW5_Translator
 {
     public class Translator : ITranslatable
