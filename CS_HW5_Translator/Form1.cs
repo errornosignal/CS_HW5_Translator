@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace CS_HW5_Translator
 {
@@ -15,6 +18,46 @@ namespace CS_HW5_Translator
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private const string PigLatin = "PigLatin";
+        private const string PigGreek = "PigGreek";
+        private const string EmptyString = "";
+
+        private void TranslateButton_Click(object sender, EventArgs e)
+        {
+            var Translator = new Translator();
+
+            if (!ToTranslateRTB.Text.Equals(EmptyString))
+            {
+                if (PigLatinRB.Checked)
+                {
+                    TranslatedRTB.Text = Translator.Translate(ToTranslateRTB.Text, PigLatin);
+                }
+                else if (PigGreekRB.Checked)
+                {
+                    TranslatedRTB.Text = Translator.Translate(ToTranslateRTB.Text, PigGreek);
+                }
+                else
+                {
+                    MessageBox.Show("Please select either Pig Latin or Pig Greek.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter some text to translate.");
+            }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            ToTranslateRTB.Clear();
+            TranslatedRTB.Clear();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
