@@ -1,42 +1,62 @@
 ﻿
-
-
-using System.Linq;
-
 namespace CS_HW5_Translator
 {
+    /// <inheritdoc />
+    /// <summary>
+    /// PigGreekTranslator Class : Extends <see cref="Translator"/>
+    /// </summary>
     public class PigGreekTranslator : Translator
     {
-        
-        public PigGreekTranslator()
-        {
-        }
+        public const string PigGreek = "Pig Greek";
 
+        /// <summary>
+        /// Converts givent string to Pig Greek.
+        /// </summary>
+        /// <param name="Word">string</param>
+        /// <returns>translated string</returns>
         public string ConvertTo(string Word)
         {
             var Index = 1;
             var Length = Word.Length;
             var First = Word[0];
             var FirstPart = "";
+            var LastPart = "";
 
-            if (Vowels.Contains(First))
+            if (Vowels.Contains(First.ToString()))
             {
-                return Word + "oi";
-            }
-
-            for (; Index < Length; Index++)
-            {
-                if (Vowels.Contains(Word[Index]) || Word[Index] == 'y')
+                if (IsAllUpper(Word))
                 {
-                    break;
+                    return Word + "OI";
                 }
                 else
                 {
-                    //doNothing();
+                    return Word + "oi";
                 }
             }
 
-            var LastPart = Word.Substring(0, Index) + "omatos";
+            if (!IsAllUpper(Word))
+            {
+                Word = Word.ToLower();
+            }
+            else { /*doNothing();*/ }
+
+            for (; Index < Length; Index++)
+            {
+                if (Vowels.Contains(Word[Index].ToString()) || Word[Index] == 'y' || Word[Index] == 'Y')
+                {
+                    break;
+                }
+                else { /*doNothing();*/ }
+            }
+
+            if (IsAllUpper(Word))
+            {
+                LastPart = Word.Substring(0, Index) + "OMATOS";
+            }
+            else
+            {
+                LastPart = Word.Substring(0, Index) + "omatos";
+            }
 
             if (char.IsUpper(First))
             {

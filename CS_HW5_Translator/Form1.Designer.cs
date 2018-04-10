@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.ToTranslateRTB = new System.Windows.Forms.RichTextBox();
-            this.PigLatinRB = new System.Windows.Forms.RadioButton();
-            this.PigGreekRB = new System.Windows.Forms.RadioButton();
+            this.Language1RB = new System.Windows.Forms.RadioButton();
+            this.Language2RB = new System.Windows.Forms.RadioButton();
             this.TranslatedRTB = new System.Windows.Forms.RichTextBox();
             this.TranslateButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
@@ -43,44 +43,43 @@
             // 
             this.ToTranslateRTB.Location = new System.Drawing.Point(15, 34);
             this.ToTranslateRTB.Name = "ToTranslateRTB";
-            this.ToTranslateRTB.Size = new System.Drawing.Size(271, 115);
+            this.ToTranslateRTB.Size = new System.Drawing.Size(305, 105);
             this.ToTranslateRTB.TabIndex = 0;
             this.ToTranslateRTB.Text = "";
             // 
-            // PigLatinRB
+            // Language1RB
             // 
-            this.PigLatinRB.AutoSize = true;
-            this.PigLatinRB.Location = new System.Drawing.Point(15, 164);
-            this.PigLatinRB.Name = "PigLatinRB";
-            this.PigLatinRB.Size = new System.Drawing.Size(66, 17);
-            this.PigLatinRB.TabIndex = 1;
-            this.PigLatinRB.TabStop = true;
-            this.PigLatinRB.Text = "Pig Latin";
-            this.PigLatinRB.UseVisualStyleBackColor = true;
+            this.Language1RB.AutoSize = true;
+            this.Language1RB.Location = new System.Drawing.Point(15, 150);
+            this.Language1RB.Name = "Language1RB";
+            this.Language1RB.Size = new System.Drawing.Size(94, 17);
+            this.Language1RB.TabIndex = 1;
+            this.Language1RB.TabStop = true;
+            this.Language1RB.Text = "Language1RB";
+            this.Language1RB.UseVisualStyleBackColor = true;
             // 
-            // PigGreekRB
+            // Language2RB
             // 
-            this.PigGreekRB.AutoSize = true;
-            this.PigGreekRB.Location = new System.Drawing.Point(106, 164);
-            this.PigGreekRB.Name = "PigGreekRB";
-            this.PigGreekRB.Size = new System.Drawing.Size(72, 17);
-            this.PigGreekRB.TabIndex = 2;
-            this.PigGreekRB.TabStop = true;
-            this.PigGreekRB.Text = "Pig Greek";
-            this.PigGreekRB.UseVisualStyleBackColor = true;
+            this.Language2RB.AutoSize = true;
+            this.Language2RB.Location = new System.Drawing.Point(115, 150);
+            this.Language2RB.Name = "Language2RB";
+            this.Language2RB.Size = new System.Drawing.Size(94, 17);
+            this.Language2RB.TabIndex = 2;
+            this.Language2RB.TabStop = true;
+            this.Language2RB.Text = "Language2RB";
+            this.Language2RB.UseVisualStyleBackColor = true;
             // 
             // TranslatedRTB
             // 
-            this.TranslatedRTB.Location = new System.Drawing.Point(15, 211);
+            this.TranslatedRTB.Location = new System.Drawing.Point(15, 192);
             this.TranslatedRTB.Name = "TranslatedRTB";
-            this.TranslatedRTB.ReadOnly = true;
-            this.TranslatedRTB.Size = new System.Drawing.Size(271, 130);
+            this.TranslatedRTB.Size = new System.Drawing.Size(305, 130);
             this.TranslatedRTB.TabIndex = 3;
             this.TranslatedRTB.Text = "";
             // 
             // TranslateButton
             // 
-            this.TranslateButton.Location = new System.Drawing.Point(15, 360);
+            this.TranslateButton.Location = new System.Drawing.Point(15, 340);
             this.TranslateButton.Name = "TranslateButton";
             this.TranslateButton.Size = new System.Drawing.Size(75, 23);
             this.TranslateButton.TabIndex = 4;
@@ -90,7 +89,7 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(96, 360);
+            this.ClearButton.Location = new System.Drawing.Point(105, 340);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(75, 23);
             this.ClearButton.TabIndex = 5;
@@ -101,7 +100,7 @@
             // ExitButton
             // 
             this.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ExitButton.Location = new System.Drawing.Point(211, 360);
+            this.ExitButton.Location = new System.Drawing.Point(240, 340);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 6;
@@ -114,14 +113,14 @@
             this.ToTranslateLabel.AutoSize = true;
             this.ToTranslateLabel.Location = new System.Drawing.Point(12, 18);
             this.ToTranslateLabel.Name = "ToTranslateLabel";
-            this.ToTranslateLabel.Size = new System.Drawing.Size(122, 13);
+            this.ToTranslateLabel.Size = new System.Drawing.Size(70, 13);
             this.ToTranslateLabel.TabIndex = 7;
-            this.ToTranslateLabel.Text = "Enter English Text Here:";
+            this.ToTranslateLabel.Text = "To Translate:";
             // 
             // TranslationLabel
             // 
             this.TranslationLabel.AutoSize = true;
-            this.TranslationLabel.Location = new System.Drawing.Point(12, 195);
+            this.TranslationLabel.Location = new System.Drawing.Point(12, 176);
             this.TranslationLabel.Name = "TranslationLabel";
             this.TranslationLabel.Size = new System.Drawing.Size(62, 13);
             this.TranslationLabel.TabIndex = 8;
@@ -132,18 +131,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.ExitButton;
-            this.ClientSize = new System.Drawing.Size(303, 401);
+            this.ClientSize = new System.Drawing.Size(334, 387);
             this.Controls.Add(this.TranslationLabel);
             this.Controls.Add(this.ToTranslateLabel);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.TranslateButton);
             this.Controls.Add(this.TranslatedRTB);
-            this.Controls.Add(this.PigGreekRB);
-            this.Controls.Add(this.PigLatinRB);
+            this.Controls.Add(this.Language2RB);
+            this.Controls.Add(this.Language1RB);
             this.Controls.Add(this.ToTranslateRTB);
             this.Name = "Form1";
-            this.Text = "Pig Latin & Greek Translator";
+            this.Text = "Form1 Title";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,8 +152,8 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox ToTranslateRTB;
-        private System.Windows.Forms.RadioButton PigLatinRB;
-        private System.Windows.Forms.RadioButton PigGreekRB;
+        private System.Windows.Forms.RadioButton Language1RB;
+        private System.Windows.Forms.RadioButton Language2RB;
         private System.Windows.Forms.RichTextBox TranslatedRTB;
         private System.Windows.Forms.Button TranslateButton;
         private System.Windows.Forms.Button ClearButton;
