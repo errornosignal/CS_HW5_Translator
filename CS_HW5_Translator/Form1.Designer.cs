@@ -1,6 +1,6 @@
 ﻿namespace CS_HW5_Translator
 {
-    partial class Form1
+    partial class form1
     {
         /// <summary>
         /// Required designer variable.
@@ -126,7 +126,7 @@
             this.TranslationLabel.TabIndex = 8;
             this.TranslationLabel.Text = "Translation:";
             // 
-            // Form1
+            // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,8 +141,7 @@
             this.Controls.Add(this.Language2RB);
             this.Controls.Add(this.Language1RB);
             this.Controls.Add(this.ToTranslateRTB);
-            this.Name = "Form1";
-            this.Text = "Form1 Title";
+            this.Name = "form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

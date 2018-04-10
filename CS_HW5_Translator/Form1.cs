@@ -4,13 +4,14 @@ using System.Windows.Forms;
 
 namespace CS_HW5_Translator
 {
-    public partial class Form1 : Form
+    public partial class form1 : Form
     {
-        public Form1()
+        public form1()
         {
             InitializeComponent();
+            this.Text = Language1 + " & " + Language2 + " Translator";
         }
-        
+
         private Translator Translator = new Translator();
         private const string Language1 = Translator.Language1;
         private const string Language2 = Translator.Language2;
@@ -23,10 +24,6 @@ namespace CS_HW5_Translator
         /// <param name="e">EventArgs</param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            var Form1 = new Form1
-            {
-                Text = Language1 + " " + Language2 + " Translator"
-            };
             this.ToTranslateLabel.Text = "Enter English Text Here:";
             this.TranslationLabel.Text = "Translation:";
             this.Language1RB.Text = Language1;
